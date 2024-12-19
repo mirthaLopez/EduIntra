@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 from urllib.parse import urlparse
 
-DATABASE_URL = os.getenv('mysql://if0_37950108:mirthalopez958@sql213.infinityfree.com:3306/if0_37950108_edunamica_databaseL')  # La variable de entorno configurada en Render
+DATABASE_URL = os.getenv('DATABASE_URL')  # La variable de entorno configurada en Render
 url = urlparse(DATABASE_URL)
 
 
