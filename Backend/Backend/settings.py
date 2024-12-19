@@ -16,6 +16,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+import os
+from urllib.parse import urlparse
+
+DATABASE_URL = os.getenv('mysql://if0_37950108:mirthalopez958@sql213.infinityfree.com:3306/if0_37950108_edunamica_databaseL')  # La variable de entorno configurada en Render
+url = urlparse(DATABASE_URL)
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -89,14 +97,16 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'if0_37950108_edunamica_database',  # El nombre de tu base de datos en MySQL
-        'USER': 'if0_37950108',  # Tu usuario de MySQL
-        'PASSWORD': 'mirthalopez958',  # La contraseña de tu usuario MySQL
-        'HOST': 'sql213.infinityfree.com',  # Si estás ejecutando MySQL localmente
-        'PORT': '3306',  # El puerto por defecto de MySQL
+        'NAME': url.path[1:],  # Elimina la barra inicial '/'
+        'USER': url.username,
+        'PASSWORD': url.password,
+        'HOST': url.hostname,
+        'PORT': url.port,
     }
 }
 
