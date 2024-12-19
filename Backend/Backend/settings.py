@@ -33,7 +33,8 @@ SECRET_KEY = 'django-insecure-marzfgl9^zx2ssmv$!e0^__dm)d7$l2uc1i!)vecrgj%6hq$v_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eduintra.onrender.com', 'localhost']
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 
