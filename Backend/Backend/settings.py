@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'Backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edunamica_database',  # El nombre de tu base de datos en MySQL
-        'USER': 'mirtha',  # Tu usuario de MySQL
-        'PASSWORD': 'pizza1234',  # La contraseña de tu usuario MySQL
-        'HOST': '127.0.0.1',  # Si estás ejecutando MySQL localmente
+        'NAME': 'if0_37950108_edunamica_database',  # El nombre de tu base de datos en MySQL
+        'USER': 'if0_37950108',  # Tu usuario de MySQL
+        'PASSWORD': 'mirthalopez958',  # La contraseña de tu usuario MySQL
+        'HOST': 'sql213.infinityfree.com',  # Si estás ejecutando MySQL localmente
         'PORT': '3306',  # El puerto por defecto de MySQL
     }
 }
